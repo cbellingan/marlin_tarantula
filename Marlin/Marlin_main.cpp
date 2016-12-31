@@ -332,8 +332,8 @@ float position_shift[3] = { 0 };
 // Set by M206, M428, or menu item. Saved to EEPROM.
 float home_offset[3] = { 0 };
 
-// Software Endstops. Default to configured limits.
-float sw_endstop_min[3] = { X_MIN_POS, Y_MIN_POS, Z_MIN_POS };
+// Software Endstops. Default to configured limits, including the Z switch position
+float sw_endstop_min[3] = { X_MIN_POS, Y_MIN_POS, Z_MIN_POS + Z_MIN_SWITCH_POS };
 float sw_endstop_max[3] = { X_MAX_POS, Y_MAX_POS, Z_MAX_POS };
 
 #if FAN_COUNT > 0
