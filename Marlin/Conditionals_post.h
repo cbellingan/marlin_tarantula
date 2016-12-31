@@ -113,8 +113,11 @@
   #if ENABLED(BLTOUCH)
     #undef Z_ENDSTOP_SERVO_NR
     #undef Z_SERVO_ANGLES
+    #undef NUM_SERVOS
+    #undef FIX_MOUNTED_PROBE
     #define Z_ENDSTOP_SERVO_NR 0
     #define Z_SERVO_ANGLES {10,90} // For BLTouch 10=deploy, 90=retract
+    #define NUM_SERVOS 1
     #undef DEACTIVATE_SERVOS_AFTER_MOVE
     #if ENABLED(Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN)
       #undef Z_MIN_ENDSTOP_INVERTING
