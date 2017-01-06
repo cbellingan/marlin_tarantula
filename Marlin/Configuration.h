@@ -489,7 +489,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 //  (0,0)
 #define X_PROBE_OFFSET_FROM_EXTRUDER 0  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER 2   // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -601,7 +601,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 
 // @section homing
 
-//#define Z_HOMING_HEIGHT 2  // (in mm) Minimal z height before homing (G28) for Z clearance above the bed, clamps, ...
+#define Z_HOMING_HEIGHT 5  // (in mm) Minimal z height before homing (G28) for Z clearance above the bed, clamps, ...
                              // Be sure you have this distance over your Z_MAX_POS in case.
 
 // ENDSTOP SETTINGS:
@@ -611,7 +611,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
 
-#define min_software_endstops true // If true, axis won't move to coordinates less than HOME_POS.
+#define min_software_endstops false // If true, axis won't move to coordinates less than HOME_POS.
 #define max_software_endstops true  // If true, axis won't move to coordinates greater than the defined lengths below.
 
 // @section machine
@@ -623,9 +623,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 #define X_MAX_POS 200
 #define Y_MAX_POS 240 // 200
 #define Z_MAX_POS 200
-// sets the lower value the position can be manually moved to. This is absolute and not relatvie to Z_MIN_POS. This is useful
-//  when adjusting the gap between the bed and the print heads. If you have a sprung bed, 3mm should be safe.
-#define Z_MIN_SWITCH_POS -3 
+
 //===========================================================================
 //========================= Filament Runout Sensor ==========================
 //===========================================================================
@@ -693,10 +691,10 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 
   #if ENABLED(AUTO_BED_LEVELING_GRID)
 
-    #define LEFT_PROBE_BED_POSITION 50
-    #define RIGHT_PROBE_BED_POSITION 170
-    #define FRONT_PROBE_BED_POSITION 30
-    #define BACK_PROBE_BED_POSITION 170
+    #define LEFT_PROBE_BED_POSITION 60
+    #define RIGHT_PROBE_BED_POSITION 180
+    #define FRONT_PROBE_BED_POSITION 60
+    #define BACK_PROBE_BED_POSITION 180
 
     #define MIN_PROBE_EDGE 10 // The Z probe minimum square sides can be no smaller than this.
 
