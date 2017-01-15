@@ -1238,6 +1238,11 @@ void kill_screen(const char* lcd_msg) {
     //
     MENU_ITEM(function, MSG_COOLDOWN, lcd_cooldown);
 
+    // BLTouch installed so allow reset menu option to reset alarm mode
+    #if ENABLED(BLTOUCH_MENU)
+      MENU_ITEM(gcode, MSG_RESET_BLT, PSTR("M280 P0 S160"));
+    #endif
+  
     //
     // Switch power on/off
     //

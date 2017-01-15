@@ -119,6 +119,8 @@
     #define Z_SERVO_ANGLES {10,90} // For BLTouch 10=deploy, 90=retract
     #define NUM_SERVOS 1
     #undef DEACTIVATE_SERVOS_AFTER_MOVE
+
+    #define BLTOUCH_MENU // uncomment if you want the reset BLTouch menu item
     #if ENABLED(Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN)
       #undef Z_MIN_ENDSTOP_INVERTING
       #define Z_MIN_ENDSTOP_INVERTING false

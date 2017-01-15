@@ -126,7 +126,7 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "cB. Tevo rev3"
+#define CUSTOM_MACHINE_NAME "cB. Tevo rev5"
 // #define CUSTOM_MACHINE_NAME "TEVO Tarantula"
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
@@ -302,9 +302,13 @@
   //#define  DEFAULT_Kd 440
 
 	// TEVO Tarantula Custom PID Settings - Hotend
-	#define  DEFAULT_Kp 3.16
-	#define  DEFAULT_Ki 0.42
-	#define  DEFAULT_Kd 140.85
+	// #define  DEFAULT_Kp 3.16
+	// #define  DEFAULT_Ki 0.42
+	//#define  DEFAULT_Kd 140.85
+  // from autotune
+  #define  DEFAULT_Kp 14.49
+  #define  DEFAULT_Ki 0.71
+  #define  DEFAULT_Kd 74.07
 
 #endif // PIDTEMP
 

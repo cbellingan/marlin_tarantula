@@ -137,6 +137,9 @@
 #ifndef MSG_COOLDOWN
   #define MSG_COOLDOWN                        "Cooldown"
 #endif
+#ifndef MSG_RESET_BLT
+  #define MSG_RESET_BLT                        "Reset BLTouch alarm"  
+#endif
 #ifndef MSG_SWITCH_PS_ON
   #define MSG_SWITCH_PS_ON                    "Switch power on"
 #endif
